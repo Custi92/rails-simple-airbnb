@@ -1,0 +1,15 @@
+<div class="container">
+  <h1><%= @flat.name %></h1>
+  <p>Adress: <%= @flat.address %></p>
+  <p>Description: <%= @flat.description %></p>
+  <p>Price: <%= @flat.price_per_night %></p>
+  <p>Number of guests: <%= @flat.number_of_guests %></p>
+  <li class="list-group-item">
+  <%= link_to "Edit", edit_flat_path(@flat) %>
+  <%= link_to "Delete", flat_path(@flat),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+</li>
+<br>
+<%= link_to "Back to flats", flats_path %>
+</div>
